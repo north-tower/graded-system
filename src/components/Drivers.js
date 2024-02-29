@@ -7,30 +7,9 @@ import { NavLink } from "react-router-dom";
 const Drivers = () => {
   const [drivers, setDrivers] = useState([]);
   const [search, setSearch] = useState("");
-  const [newDriver, setNewDriver] = useState({
-    firstName: '',
-    lastName: ''
-  });
-
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setNewDriver(prevState => ({
-      ...prevState,
-      [name]: value
-    }));
-  };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    try {
-      await axios.post('http://localhost:5000/api/v1/addDriver', newDriver);
-      // Optionally, update the UI to reflect the new driver
-      console.log('Driver added successfully');
-    } catch (error) {
-      console.error('Error adding new driver:', error);
-    }
-  };
-
+  
+ 
+ 
   useEffect(() => {
     getDrivers();
   }, []);
