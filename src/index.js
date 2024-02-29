@@ -12,6 +12,7 @@ import {
 
 import AddDriver from "./components/AddDriver";
 import AddHotel from "./components/AddHotel";
+import AddTrip from "./components/AddTrip";
 
 ReactDOM.render(
   <Router>
@@ -22,6 +23,8 @@ ReactDOM.render(
       <Route path="/drivers" element={<Drivers />} />
       <Route path="/adddrivers" element={<AddDriver />} />
       <Route path="/addhotel" element={<AddHotel />} />
+      <Route path="/addtrip" element={<AddTrip />} />
+
 
     </Routes>
   </Router>,

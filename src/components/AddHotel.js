@@ -6,7 +6,8 @@ function AddHotel() {
     const [newHotel, setNewHotel] = useState({
         Name: '',
         Address: '',
-        Rating: ''
+        Rating: '',
+        id: ''
       });
     const handleInputChange = (e) => {
         const { name, value } = e.target;
