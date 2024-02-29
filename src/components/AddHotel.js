@@ -1,12 +1,13 @@
 import React from 'react'
-
+import axios from 'axios';
+import { useNavigate } from 'react-router-dom'; // Import useHistory hook
+import { useState } from 'react';
 function AddHotel() {
     const [newHotel, setNewHotel] = useState({
         Name: '',
         Address: '',
         Rating: ''
       });
-
     const handleInputChange = (e) => {
         const { name, value } = e.target;
         setNewHotel(prevState => ({
@@ -14,6 +15,9 @@ function AddHotel() {
           [name]: value
         }));
       };
+
+
+  const navigate = useNavigate(); // Initialize useHistory hook
 
       const handleSubmit = async (e) => {
         e.preventDefault();
