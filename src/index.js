@@ -11,6 +11,7 @@ import {
 } from "./components";
 
 import AddDriver from "./components/AddDriver";
+import AddHotel from "./components/AddHotel";
 
 ReactDOM.render(
   <Router>
@@ -20,6 +21,8 @@ ReactDOM.render(
       <Route path="/trips" element={<Trips />} />
       <Route path="/drivers" element={<Drivers />} />
       <Route path="/adddrivers" element={<AddDriver />} />
+      <Route path="/addhotel" element={<AddHotel />} />
+
     </Routes>
   </Router>,
 
