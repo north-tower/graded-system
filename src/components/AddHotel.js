@@ -27,7 +27,7 @@ function AddHotel() {
           // Display success message
           window.alert('Hotel added successfully');
           // Redirect to Drivers component
-          navigate('/hotels');
+          navigate('/');
         } catch (error) {
           console.error('Error adding new hotel:', error);
         }
