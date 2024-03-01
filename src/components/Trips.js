@@ -43,12 +43,12 @@ return (
         font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800" to="/addtrip">
                 Add Trip
             </NavLink>
-    <div className="App">
+    {/* <div className="App">
       <div style={{ margin: '0 auto', marginTop: '1%' ,marginBottom: '1%' ,marginLeft:'40%' , marginRight:'40%'}}>
         <input className="form-control me-2" onChange={handleSearchChange} value={search} type="text" 
         placeholder="Search Trips"></input>
       </div>
-    </div>
+    </div> */}
               
     <div>
     <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
