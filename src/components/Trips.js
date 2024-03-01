@@ -14,10 +14,14 @@ const Trips = () =>  {
     getTrips();
     }, []);
 
-  const getTrips = async () => {
-      const response = await axios.get('http://localhost:5000/trips');
-      setTrips(response.data);
-  }
+    const getTrips = async () => {
+      try {
+        const response = await axios.get('http://localhost:5000/api/v1/getTrips');
+        setTrips(response.data); // Set drivers state directly to response.data
+      } catch (error) {
+        console.error('Error fetching trips:', error);
+      }
+    }
  
   const [search, setNewSearch] = useState("");
 
@@ -47,25 +51,41 @@ return (
     </div>
               
     <div>
-      <table class="table table-dark table-borderless">
-        <thead>
-          <tr>
-           <th scope="col">Driver_id</th>
-           <th scope="col">Hotel_id</th>
-           <th scope="col">Start_time</th>
-           <th scope="col">Delivery_time</th>
-           <th scope="col">Rating</th>
-          </tr>
+    <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+        <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+            <tr>
+                <th scope="col" class="px-6 py-3">
+                    Hotel
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    Driver
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    Start Time
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    End Time
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    Cost
+                </th>
+            </tr>
+
         </thead>
 
          <tbody>
             {filtered.map(trip => (
-              <tr >
-                <td>{trip.driver_id}</td>
-                <td>{trip.hotel_id}</td>
-                <td>{trip.start_time}</td>
-                <td>{trip.delivery_time}</td>
-                <td>{trip.rating}</td>
+              
+              <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+             <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+             {trip.driverId}
+                </th>
+               
+               
+                <td class="px-6 py-4">{trip.hotelId}</td>
+                <td class="px-6 py-4">{trip.endTime}</td>
+                <td class="px-6 py-4">{trip.startTime}</td>
+                <td class="px-6 py-4">{trip.cost}</td>
               </tr>
             ))}
           </tbody>
