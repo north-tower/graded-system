@@ -25,7 +25,7 @@ function AddHotel() {
         try {
           await axios.post('http://localhost:5000/api/v1/addHotel', newHotel);
           // Display success message
-          window.alert('Hotel added successfully');
+          window.alert('Hotels added successfully');
           // Redirect to Drivers component
           navigate('/');
         } catch (error) {
