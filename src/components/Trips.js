@@ -1,6 +1,8 @@
 import React,{useState, useEffect} from "react";
 import axios from 'axios';
 import '../App.css';
+import { NavLink } from 'react-router-dom';
+
 
 
 
@@ -33,6 +35,10 @@ const Trips = () =>  {
 return (
 
   <>
+  <NavLink className="m-1 focus:outline-none text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 
+        font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800" to="/addtrip">
+                Add Trip
+            </NavLink>
     <div className="App">
       <div style={{ margin: '0 auto', marginTop: '1%' ,marginBottom: '1%' ,marginLeft:'40%' , marginRight:'40%'}}>
         <input className="form-control me-2" onChange={handleSearchChange} value={search} type="text" 
