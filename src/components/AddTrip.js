@@ -24,7 +24,7 @@ function AddTrip() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-          await axios.post('http://localhost:5000/api/v1/addTrip', newTrip);
+          await axios.post('https://supreme-goggles-beta.vercel.app/api/v1/addTrip', newTrip);
           // Display success message
           window.alert('Trip added successfully');
           // Redirect to Drivers component

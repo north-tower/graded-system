@@ -17,7 +17,7 @@ const Drivers = () => {
   
   const getDrivers = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/api/v1/getData');
+      const response = await axios.get('https://supreme-goggles-beta.vercel.app/api/v1/getData');
       setDrivers(response.data); // Set drivers state directly to response.data
     } catch (error) {
       console.error('Error fetching drivers:', error);
