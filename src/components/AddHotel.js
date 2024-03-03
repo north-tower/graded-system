@@ -23,7 +23,7 @@ function AddHotel() {
       const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-          await axios.post('http://localhost:5000/api/v1/addHotel', newHotel);
+          await axios.post('https://supreme-goggles-beta.vercel.app/api/v1/addHotel', newHotel);
           // Display success message
           window.alert('Hotels added successfully');
           // Redirect to Drivers component

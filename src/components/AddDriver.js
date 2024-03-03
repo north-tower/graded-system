@@ -23,7 +23,7 @@ function AddDriver() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:5000/api/v1/addDriver', newDriver);
+      await axios.post('https://supreme-goggles-beta.vercel.app/api/v1/addDriver', newDriver);
       // Display success message
       window.alert('Driver added successfully');
       // Redirect to Drivers component
