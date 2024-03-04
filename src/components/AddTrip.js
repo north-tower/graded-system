@@ -6,6 +6,11 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 
 function AddTrip() {
+   const [driverId, setDriverId] = useState("");
+   const [hotelId, setHotelId] = useState("");
+     const [startTime, setStartTime] = useState("");
+    const [endTime, setEndTime] = useState("");
+    const [cost, setCost] = useState("");
     const [newTrip, setNewTrip] = useState({
         driverId: '',
         hotelId: '',
@@ -37,7 +42,7 @@ function AddTrip() {
     <div>
     <form class="max-w-md mx-auto" onSubmit={handleSubmit}>
     <div class="relative z-0 w-full mb-5 group">
-      <input name="driverId" value={newTrip.driverId} onChange={handleInputChange} 
+      <input name="driverId" value={driverId}  onChange={(e) => setDriverId(e.target.value)}
         class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500
         focus:outline-none focus:ring-0 focus:border-blue-600 peer" required />
       <label for="floating_email" class="peer-focus:font-medium absolute 
@@ -47,7 +52,7 @@ function AddTrip() {
        peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Driver Name</label>
     </div>
     <div class="relative z-0 w-full mb-5 group">
-      <input name="hotelId" value={newTrip.hotelId} onChange={handleInputChange} 
+      <input name="hotelId" value={hotelId} onChange={(e) => setHotelId(e.target.value)}
         class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500
         focus:outline-none focus:ring-0 focus:border-blue-600 peer" required />
       <label for="floating_email" class="peer-focus:font-medium absolute 
@@ -57,14 +62,14 @@ function AddTrip() {
        peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Hotel Name</label>
     </div>
     <div class="relative z-0 w-full mb-5 group">
-      <input type='date' name="startTime" value={newTrip.startTime} onChange={handleInputChange}  class="block py-2.5 px-0 w-full
+      <input type='date' name="startTime" value={startTime} onChange={(e) => setStartTime(e.target.value)}  class="block py-2.5 px-0 w-full
       text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500
       focus:outline-none focus:ring-0 focus:border-blue-600 peer" required />
       <label for="floating_password" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500
        peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Start Date</label>
     </div>
     <div class="relative z-0 w-full mb-5 group">
-      <input type="date" name="endTime" value={newTrip.endTime} onChange={handleInputChange}  class="block py-2.5 px-0 w-full
+      <input type="date" name="endTime" value={endTime} onChange={(e) => setEndTime(e.target.value)}  class="block py-2.5 px-0 w-full
       text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500
       focus:outline-none focus:ring-0 focus:border-blue-600 peer" required />
       <label for="floating_password" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 
@@ -72,7 +77,7 @@ function AddTrip() {
       peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">End Date</label>
     </div>
     <div class="relative z-0 w-full mb-5 group">
-      <input name="cost" value={newTrip.cost} onChange={handleInputChange}  class="block py-2.5 px-0 w-full
+      <input name="cost" value={cost} onChange={(e) => setCost(e.target.value)} class="block py-2.5 px-0 w-full
       text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500
       focus:outline-none focus:ring-0 focus:border-blue-600 peer" required />
       <label for="floating_password" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 
