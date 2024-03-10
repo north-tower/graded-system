@@ -11,10 +11,11 @@ function AddHotel() {
   });
 
   const handleInputChange = (e) => {
-    const { name, value } = e.target;
+    const { Name, value } = e.target;
+
     setNewHotel(prevState => ({
       ...prevState,
-      [name]: value
+      [Name]: value
     }));
   };
 
