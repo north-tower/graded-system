@@ -106,7 +106,7 @@ function Navigation() {
       <a href="#" class="bg-gray-900 text-white block rounded-md px-3 py-2 text-base font-medium" aria-current="page">Dashboard</a>
       <NavLink to="/"  class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3
               py-2 text-base font-medium">Hotels</NavLink>
-      <NavLink to"/trips" href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 
+      <NavLink to="/trips" href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 
               text-base font-medium">Trips</NavLink>
       <NavLink to"/drivers" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 
               text-base font-medium">Drivers</NavLink>
